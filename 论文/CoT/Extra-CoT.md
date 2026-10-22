@@ -6,7 +6,7 @@
 
 ### 图二讲解
 
-![[Pasted image 20261021213625.png]]
+![](<../../imgs/Pasted image 20261021213625.png>)
 
 #### （a）CoT Compressor 语义压缩器
 
@@ -22,7 +22,7 @@
 Semantically-preserved, Question-aware CoT Compressor Training：语义保持、问题感知的思维链压缩器训练
 
 ##### W，F，Q，T含义
-![[截屏2026-10-21 21.44.21.png]]
+![](<../../imgs/截屏2026-10-21 21.44.21.png>)
 
 ###### 第一步：为什么要同时区分 Word 和 Formula？
 ```
@@ -43,7 +43,7 @@ Semantically-preserved, Question-aware CoT Compressor Training：语义保持、
 	- Token-level：语言模型实际处理的 Token 级别。
 因为一个词或一个数学公式可能被分词器拆分成多个 Token。
 ```
-![[截屏2026-10-21 22.11.33.png]]
+![](<../../imgs/截屏2026-10-21 22.11.33.png>)
 
 ##### 第三步：训练CoT Compressor
 
@@ -90,7 +90,7 @@ Reasoning LLM：推理大模型，接受数学题目，生成原始的CoT
 ##### 第二步：压缩原始CoT
 
 第一阶段训练好的 Compressor 对这些长 CoT 进行压缩，产生多种不同长度的版本。
-![[截屏2026-10-21 22.32.43.png]]
+![](<../../imgs/截屏2026-10-21 22.32.43.png>)
 
 粉红色的 Token 方块：是Fixed-ratio Data（固定比例数据），用来训练模型遵守压缩比例指令
 
@@ -139,7 +139,7 @@ Difficulty Selective Model（难度选择模型）：它负责估计一道数学
 
 图中的例子表示：
 
-![[截屏2026-10-21 22.41.11.png]]
+![](<../../imgs/截屏2026-10-21 22.41.11.png>)
 
 **为什么不是直接选择某次答对的最低比例？（60%）**
 
@@ -166,7 +166,7 @@ Difficulty Selective Model（难度选择模型）：它负责估计一道数学
 
 图右下角有两个奖励模块
 
-![[截屏2026-10-21 22.45.48.png]]
+![](<../../imgs/截屏2026-10-21 22.45.48.png>)
 
 紫色的R：表示控制头未知上的奖励
 
@@ -178,4 +178,4 @@ Difficulty Selective Model（难度选择模型）：它负责估计一道数学
 
 
 #### 示例
-![[截屏2026-10-21 22.50.12.png]]
+![](<../../imgs/截屏2026-10-21 22.50.12.png>)
